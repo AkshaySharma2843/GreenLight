@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/fragmentOne">
+
+    <fragment
+        android:id="@+id/areaFragment"
+        android:name="com.glp.greenlight.ui.area.AreaFragment"
+        android:label="AreaFragment" >
+        <argument
+            android:name="areaName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/regionFragment"
+        android:name="com.glp.greenlight.ui.region.RegionFragment"
+        android:label="RegionFragment" >
+        <action
+            android:id="@+id/action_regionFragment_to_areaFragment"
+            app:destination="@id/areaFragment" />
+        <argument
+            android:name="regionTitle"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/zoneFragment"
+        android:name="com.glp.greenlight.ui.zone.ZoneFragment"
+        android:label="ZoneFragment" >
+        <action
+            android:id="@+id/action_zoneFragment_to_regionFragment"
+            app:destination="@id/regionFragment" />
+        <argument
+            android:name="countryName"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.glp.greenlight.ui.fragment.FragmentOne"
+        android:label="FragmentOne" >
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.glp.greenlight.ui.fragment.FragmentTwo"
+        android:label="FragmentTwo" >
+        <action
+            android:id="@+id/action_fragmentTwo_to_zoneFragment"
+            app:destination="@id/zoneFragment" />
+    </fragment>
+</navigation>

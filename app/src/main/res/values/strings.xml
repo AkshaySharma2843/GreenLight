@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GreenLight</string>
+    <string name="string_tap_to_begin_the_fun">Tap to begin the fun!</string>
+    <string name="france_performance">France Performance</string>
+    <string name="label_west"><u>West</u></string>
+    <string name="label_west_performance">West Performance</string>
+    <string name="label_area_performance">Area Performance</string>
+</resources>
